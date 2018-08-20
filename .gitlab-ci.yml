@@ -1,16 +1,9 @@
 stages:
   - build
-  - docker-build
-  - docker-push
 
-job 1:
+job-build:
   stage: build
+  image: golang
   script: "echo 'This is docker build'"
 
-job 2:
-  stage: docker-build
-  script: "echo 'This is docker-build'"
 
-job 3:
-  stage: docker-push
-  script: "echo 'This is docker build-push'"
