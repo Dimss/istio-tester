@@ -4,6 +4,6 @@ stages:
 job-build:
   stage: build
   image: golang
-  script: "export CGO_ENABLED=0 GOOS=linux GOARCH=amd64; go build -o istio-tester;"
+  script: "curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh; export CGO_ENABLED=0 GOOS=linux GOARCH=amd64; go build -o istio-tester;"
 
 
