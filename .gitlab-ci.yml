@@ -4,6 +4,6 @@ stages:
 job-build:
   stage: build
   image: golang
-  script: "echo 'This is docker build'"
+  script: "export CGO_ENABLED=0 GOOS=linux GOARCH=amd64; go build -o istio-tester;"
 
 
