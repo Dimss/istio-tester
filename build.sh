@@ -5,5 +5,5 @@ cd /go/src/my-test-proj
 dep ensure;
 export CGO_ENABLED=0 GOOS=linux GOARCH=amd64;
 ls -all
-go build -o istio-tester;
+go build -o istio-teste-new-build;
 ls -all
