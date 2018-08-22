@@ -6,10 +6,14 @@ job-build:
   stage: build
   image: golang
   script: ./build.sh
+  artifacts:
+    paths:
+    - istio-teste-new-build
+    expire_in: 1 day
 
-job-test:
-  stage: test
-  script: ls -all
+#job-test:
+#  stage: test
+#  script: ls -all
 
 
 
