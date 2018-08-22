@@ -9,6 +9,9 @@ job-build:
 
 job-test:
   stage: test
+  script: ls -all
+
+
 
 #  script: "curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh; dep ensure; export CGO_ENABLED=0 GOOS=linux GOARCH=amd64; go build -o istio-tester;"
 
