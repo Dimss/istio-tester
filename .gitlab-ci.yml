@@ -11,9 +11,12 @@ job-build:
     - istio-teste-new-build
     expire_in: 1 day
 
-#job-test:
-#  stage: test
-#  script: ls -all
+job-test:
+  stage: test
+  image: golang
+  dependencies:
+    - job-build
+  script: ls -all
 
 
 
