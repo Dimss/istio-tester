@@ -18,4 +18,11 @@ jobs:
       - checkout
       - run: curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh;
       - run: dep ensure
-      - run: go test;
+      - run: go test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
