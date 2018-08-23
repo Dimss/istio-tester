@@ -10,6 +10,8 @@ jobs:
       - run: dep ensure
       - run: go build -o istio-teste-new-build;
       - run: ls -all
+      - store_artifacts:
+          path: istio-teste-new-build
   test:
     docker:
       - image: circleci/golang:1.9
@@ -25,4 +27,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test
+      - test:
+          requires:
+            - build
